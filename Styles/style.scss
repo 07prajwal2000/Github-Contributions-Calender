@@ -1,0 +1,116 @@
+$phone: "only screen and (max-width : 768px)";
+
+body {
+    background-color: #0d1117;
+    color: rgb(228, 228, 228);
+    font-family: monospace;
+    position: relative;
+    min-height: 90vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+
+.details {
+    position: absolute;
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000000;
+    display: none;
+    background-color: #1e2530;
+    border-radius: 10px;
+}
+
+#parent {
+    min-width: 100px;
+    min-height: 100px;
+    border: 1px solid green;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    gap: 15px;
+    padding: 10px 10px 50px 10px;
+    position: relative;
+
+    .month {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;    
+    }
+
+    .weeks {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .week {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .item {
+        width: 12px;
+        height: 12px;
+        background-color: #12161d;
+        border-radius: 2px;
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            transform: scale(125%);
+        }
+    }
+    
+    .item-high {
+        background-color: #25d345;
+    }
+    
+    .item-med {
+        background-color: #288839;
+    }
+    
+    .item-low {
+        background-color: #1b6a34;
+    }
+
+    #contribution-info{
+        display: flex;
+        position: absolute;
+        left: 20px;
+        bottom: 5px;
+        gap: 4px;
+        p {
+            padding: 0 10px;
+            margin: 0;
+            font-weight: bold;
+        }
+        .item {
+            padding: 0;
+            margin: 4px 0;
+        }
+    }
+    @media #{$phone} {
+        #contribution-info {
+            // flex-direction: column;
+            position: relative;
+        }
+        .span {
+            width: 250px;
+            
+        }
+    }
+}
+
+h4 {
+    padding: 0;
+    margin:  0;
+    text-align: center;
+}

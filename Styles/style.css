@@ -1,0 +1,151 @@
+body {
+  background-color: #0d1117;
+  color: #e4e4e4;
+  font-family: monospace;
+  position: relative;
+  min-height: 90vh;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 100px;
+}
+
+.details {
+  position: absolute;
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000000;
+  display: none;
+  background-color: #1e2530;
+  border-radius: 10px;
+}
+
+#parent {
+  min-width: 100px;
+  min-height: 100px;
+  border: 1px solid green;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 15px;
+  padding: 10px 10px 50px 10px;
+  position: relative;
+}
+
+#parent .month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#parent .weeks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 5px;
+}
+
+#parent .week {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+}
+
+#parent .item {
+  width: 12px;
+  height: 12px;
+  background-color: #12161d;
+  border-radius: 2px;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+
+#parent .item:hover {
+  -webkit-transform: scale(125%);
+          transform: scale(125%);
+}
+
+#parent .item-high {
+  background-color: #25d345;
+}
+
+#parent .item-med {
+  background-color: #288839;
+}
+
+#parent .item-low {
+  background-color: #1b6a34;
+}
+
+#parent #contribution-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 20px;
+  bottom: 5px;
+  gap: 4px;
+}
+
+#parent #contribution-info p {
+  padding: 0 10px;
+  margin: 0;
+  font-weight: bold;
+}
+
+#parent #contribution-info .item {
+  padding: 0;
+  margin: 4px 0;
+}
+
+@media only screen and (max-width: 768px) {
+  #parent #contribution-info {
+    position: relative;
+  }
+  #parent .span {
+    width: 250px;
+  }
+}
+
+h4 {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
